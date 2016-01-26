@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <h3 align="center">Conway's Game of Life</h3>
+    </div>
+    <div id="controls">
+        <div>
+            <label>FPS</label> {{fpsCount}}
+        </div>
+        <div>
+            <label>Cell Size =
+                <select ng-model="size" id="cellSize" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="8" selected>8</option>
+                    <option value="16">16</option>
+                    <option value="32">32</option>
+                    <option value="64">64</option>
+                </select>{{size}}
+            </label>
+        </div>
+
+        <input type="button" value="{{running ? 'Stop' : 'Start'}}" id="Start" name="Start" ng-click="start()">
+        <input type="button" value="Step" id="Step" name="Step" ng-click="step()">
+        <input type="button" value="Generate Random Cells" id="Rand" name="Rand" ng-click="rand()">
+    </div>
+
+    <div id="BoardContainer">
+        <canvas id="BoardCanvas" width="1500" height="1000" ng-click="boardClick($event)"></canvas>
+    </div>
+
+</div>

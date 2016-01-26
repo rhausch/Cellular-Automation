@@ -1,0 +1,31 @@
+{
+  "name": "Cellular Automation",
+  "version": "0.1.0",
+  "description": "Showcase of Cellular Automation Simulations",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "Cellular",
+    "Automation",
+    "Simulation"
+  ],
+  "authors": [
+    "Robert Hausch"
+  ],
+  "license": "Apache",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-ui-router": "~0.2.16",
+    "bootstrap-ui": "~1.1.0",
+    "angular-bootstrap": "~1.1.0",
+    "bootstrap": "~3.3.6"
+  }
+}
