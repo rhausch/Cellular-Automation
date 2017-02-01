@@ -1,0 +1,57 @@
+<div class="container">
+    <div>
+        <h3 align="center">Neighbourhoods</h3>
+    </div>
+    <div id="controls">
+        <div>
+            <label>FPS</label> {{fpsCount}}
+        </div>
+        <div>
+            <label>Cell Size =
+                <select ng-model="size" id="cellSize" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="8" selected>8</option>
+                    <option value="16">16</option>
+                    <option value="32">32</option>
+                    <option value="64">64</option>
+                </select>
+            </label>
+            <label>Neighbours =
+                <select ng-model="neighbours" id="cellSize" >
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </label>
+            <label>Occupancy =
+                <select ng-model="occupancy" id="cellSize" >
+                    <option value="99">99%</option>
+                    <option value="95">95%</option>
+                    <option value="90" selected>90%</option>
+                    <option value="80">80%</option>
+                    <option value="70">70%</option>
+                    <option value="50">50%</option>
+                </select>
+            </label>
+            <label>Corners
+                <input type="checkbox" ng-model="corners"></input>
+            </label>
+        </div>
+
+        <input type="button" value="{{running ? 'Stop' : 'Start'}}" id="Start" name="Start" ng-click="start()">
+        <input type="button" value="Step" id="Step" name="Step" ng-click="step()">
+        <input type="button" value="Generate Random Cells" id="Rand" name="Rand" ng-click="rand()">
+    </div>
+
+    <div id="BoardContainer">
+        <canvas id="BoardCanvas" width="500" height="500" ng-click="boardClick($event)"></canvas>
+    </div>
+
+</div>

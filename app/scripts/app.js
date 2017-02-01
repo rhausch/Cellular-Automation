@@ -31,8 +31,20 @@ angular.module('cellautoApp', ['ui.router'])
                         controller  : 'ConwayController'
                     }
                 }
-            });
+            })
 
+            // route for Neighbourhoods
+            .state('app.neighbourhoods', {
+                url: 'neighbourhoods',
+                views: {
+                    'content@': {
+                        templateUrl : 'views/neighbourhoods.html',
+                        controller  : 'NeighbourhoodsController'
+                    }
+                }
+            })
+
+            ;
 
         $urlRouterProvider.otherwise('/');
     })
